@@ -18,7 +18,7 @@ const mongoose = require("mongoose");
 
 const candidateSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  id: { type: String, unique: true },
+  // id: { type: String, unique: true },
 });
 
 const Candidate = mongoose.model("Candidate", candidateSchema);

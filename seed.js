@@ -1,15 +1,18 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const Candidate = require('./src/models/Candidate');
 
-mongoose.connect('mongodb://localhost/voting-platform', { })
+// const atlasUri = process.env.MONGO_URI;
+
+mongoose.connect(process.env.MONGODB_URI, { })
   .then(async () => {
     console.log('Connected to MongoDB');
 
-    // Sample candidates to add
     const candidates = [
-      { name: 'Candidate 1' },
-      { name: 'Candidate 2' },
-      { name: 'Candidate 3' },
+      { name: 'Ebele Jonathan' },
+      { name: 'Obasanjo Olusegun' },
+      { name: 'Tinubu Bola Ahmed' },
     ];
 
     try {
